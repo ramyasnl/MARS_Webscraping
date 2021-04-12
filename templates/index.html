@@ -12,15 +12,18 @@
   </head>
   <style>
     body{background-color: rosybrown}
+    img { border: 5px solid rgb(194, 22, 22);}
   </style>
   <body>
     <div class="container">
       <!-- Add Jumbotron to Header -->
-      <div class="jumbotron text-center">
-        <h1><font color="green">  Mission to Mars</font></h1>
+      <div class="jumbotron jumbotron-fluid text-center">
+        <h1><font color="green"> Mission to Mars</font></h1>
         <!-- Add a button to activate scraping script #<button type="button" class="btn btn-outline-dark">Dark</button>-->
+
         <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
-      </div>     
+        <style>tr{background-color: skyblue;}</style>
+              </div>     
                   <!-- Add section for Mars News -->
       <div class="row" id="mars-news">
         <div class="col-md-12">
@@ -38,20 +41,26 @@
       <div class="row" id="mars-featured-image">
         <div class="col-md-8">
           <h2>Featured Mars Image</h2>
-
+                     
           <!-- if images is False/None/non-existent, then default to error message -->
+          
           <img
             src="{{mars.featured_image | default('static/images/error.png', true) }}"
             class="img-responsive"
-            alt="Responsive image"
-          />
+            alt="Responsive image" 
+           />
+            
+            
         </div>
 
         <div class="col-md-4">
           <!-- Mars Facts -->
           <div class="row" id="mars-facts">
-            <h4>Mars Facts</h4>
-            {{ mars.facts | safe }}
+            <h4><p style="color:rgba(19, 17, 17, 0.685)"><b>Mars Facts.</b></p></h4>
+            <span class="border border-dark"></span>
+                                            
+               {{ mars.facts | safe }}
+                                                                   
           </div>
         </div>
       </div>
