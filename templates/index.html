@@ -17,19 +17,18 @@
   <body>
     <div class="container">
       <!-- Add Jumbotron to Header -->
-      <div class="jumbotron jumbotron-fluid text-center">
+      <div class="jumbotron jumbotron-fluid text-center"> 
         <h1><font color="green"> Mission to Mars</font></h1>
         <!-- Add a button to activate scraping script #<button type="button" class="btn btn-outline-dark">Dark</button>-->
-
         <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
-        <style>tr{background-color: skyblue;}</style>
+         <style> tr {background-color: skyblue} </style>
               </div>     
                   <!-- Add section for Mars News -->
       <div class="row" id="mars-news">
         <div class="col-md-12">
           <div class="media">
             <div class="media-body">
-              <h2>Latest Mars News</h2>
+              <h2><b>Latest Mars News</b></h2>
               <h4 class="media-heading">{{ mars.news_title }}</h4>
               <p>{{ mars.news_paragraph }}</p>
             </div>
@@ -40,7 +39,7 @@
       <!-- Section for Featured Image and Facts table -->
       <div class="row" id="mars-featured-image">
         <div class="col-md-8">
-          <h2>Featured Mars Image</h2>
+          <h2><b>Featured Mars Image</b></h2>
                      
           <!-- if images is False/None/non-existent, then default to error message -->
           
@@ -56,7 +55,7 @@
         <div class="col-md-4">
           <!-- Mars Facts -->
           <div class="row" id="mars-facts">
-            <h4><p style="color:rgba(19, 17, 17, 0.685)"><b>Mars Facts.</b></p></h4>
+            <h4><p style="color:rgba(17, 16, 16, 0.685)"><b>Mars Facts.</b></p></h4>
             <span class="border border-dark"></span>
                                             
                {{ mars.facts | safe }}
@@ -68,7 +67,7 @@
       <!-- Section for Mars Hemispheres -->
       <div class="row" id="mars-hemispheres">
         <div class="page-header">
-          <h2 class="text-center">Mars Hemispheres</h2>
+          <h2 class="text-center"><b>Mars Hemispheres</b></h2>
         </div>
 
         {% for hemisphere in mars.hemispheres %}
